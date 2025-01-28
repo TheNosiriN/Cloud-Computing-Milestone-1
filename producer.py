@@ -9,8 +9,8 @@ files = glob.glob("*.json")
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = files[0]
 
 # Define project and topic details
-project_id = "astute-citadel-449203-s0"  # Replace with your GCP project ID
-topic_name = "testTopic"         # Replace with your topic name
+project_id = "astute-citadel-449203-s0" 
+topic_name = "testTopic"
 
 # Create a publisher client and topic path
 publisher = pubsub_v1.PublisherClient()
@@ -18,7 +18,7 @@ topic_path = publisher.topic_path(project_id, topic_name)
 print(f"Publishing messages to {topic_path}...")
 
 # Path to your CSV file
-csv_file_path = "Labels.csv"  # Replace with your CSV file path
+csv_file_path = "Labels.csv" 
 
 # Read the CSV file and publish each row as a message
 with open(csv_file_path, mode='r') as csv_file:
