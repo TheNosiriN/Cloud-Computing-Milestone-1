@@ -8,8 +8,8 @@ files = glob.glob("*.json")
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = files[0]
 
 # Define project and subscription details
-project_id = "astute-citadel-449203-s0"     # Replace with your GCP project ID
-subscription_id = "testTopic-sub"   # Replace with your subscription name
+project_id = "astute-citadel-449203-s0"
+subscription_id = "testTopic-sub"
 
 # Create a subscriber client and subscription path
 subscriber = pubsub_v1.SubscriberClient()
